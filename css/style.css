@@ -1,0 +1,350 @@
+/* ===========================
+   Global Styles
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#F4F8FC;
+    color:#1F2937;
+}
+
+/* ===========================
+   Header
+=========================== */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+    background:#fff;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.brand-logo{
+    width:35px;
+    height:35px;
+}
+
+.app-title{
+    font-size:1.6rem;
+    font-weight:700;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+.nav-menu ul{
+    display:flex;
+    gap:2rem;
+    list-style:none;
+}
+
+.nav-menu a{
+    text-decoration:none;
+    color:#1F2937;
+    transition:.3s;
+}
+
+.nav-menu a:hover{
+    color:#2563EB;
+}
+
+/* ===========================
+   Theme Button
+=========================== */
+.theme-btn{
+    width:48px;
+    height:48px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#fff;
+    border:2px solid #3B82F6;
+    border-radius:50%;
+
+    cursor:pointer;
+
+    box-shadow:0 4px 10px rgba(37,99,235,.15);
+    transition:.3s;
+}
+
+.theme-btn img{
+    width:22px;
+}
+
+.theme-btn:hover{
+    background:#3B82F6;
+}
+
+.theme-btn:hover img{
+    filter:brightness(0) invert(1);
+}
+
+/* ===========================
+   Search
+=========================== */
+.search-box{
+    position:relative;
+}
+
+.search-box input{
+    width:260px;
+    height:52px;
+
+    padding:0 50px 0 18px;
+
+    border:1px solid #D1D5DB;
+    border-radius:10px;
+
+    outline:none;
+    font-size:1rem;
+}
+
+.search-btn{
+    position:absolute;
+    right:15px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+.search-btn img{
+    width:20px;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+.weather-hero{
+    padding:50px 70px;
+}
+
+.hero-top{
+    display:flex;
+    justify-content:center;
+    margin-bottom:50px;
+}
+
+.hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+     align-items: flex-start;
+}
+
+/* ===========================
+   Location Button
+=========================== */
+.location-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 24px;
+
+    background:#fff;
+    border:2px solid #3B82F6;
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.location-btn img{
+    width:20px;
+}
+
+.location-btn:hover{
+    background:#3B82F6;
+    color:#fff;
+}
+
+.location-btn:hover img{
+    filter:brightness(0) invert(1);
+}
+
+/* ===========================
+   Left Weather
+=========================== */
+.weather-info{
+    flex:1;
+}
+
+.location{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.location img{
+    width:28px;
+    height:28px;
+}
+
+.city-name{
+    font-size:2.5rem;
+    font-weight:700;
+}
+
+.current-date{
+    margin-top:10px;
+    color:#6B7280;
+}
+
+.weather-main{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    margin-top:30px;
+}
+
+.weather-icon img{
+    width:120px;
+    height:120px;
+}
+
+.temperature h2{
+    font-size:4.5rem;
+    line-height:1;
+}
+
+.condition{
+    font-size:1.5rem;
+    font-weight:600;
+    margin-top:8px;
+}
+
+.feels-like{
+    margin-top:6px;
+    color:#6B7280;
+}
+
+/* ===========================
+   Weather Details Card
+=========================== */
+.weather-details-card{
+   margin-top: -20px;
+    width:310px;
+
+    padding:28px;
+
+    background:#fff;
+    border-radius:24px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.detail-card{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #EEF2F7;
+}
+
+.detail-card:last-child{
+    border-bottom:none;
+}
+
+.detail-card img{
+    width:24px;
+    height:24px;
+}
+
+.detail-card span{
+    flex:1;
+
+    color:#6B7280;
+}
+
+.detail-card strong{
+    font-size:1.1rem;
+}
+
+/* ===========================
+   Forecast
+=========================== */
+.forecast-section{
+    padding:20px 70px 60px;
+}
+
+.forecast-section h2{
+    font-size:2rem;
+    margin-bottom:30px;
+}
+
+.forecast-container{
+    display:flex;
+    gap:20px;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.forecast-card{
+    flex:1;
+    min-width:180px;
+
+    background:#fff;
+
+    padding: 20px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.forecast-card:hover{
+    transform:translateY(-5px);
+}
+
+.forecast-card h3{
+    text-transform:capitalize;
+    margin-bottom:15px;
+}
+
+.forecast-card img{
+    width:60px;
+    margin:15px 0;
+}
+
+.max-temp{
+    font-size:1.5rem;
+    font-weight:700;
+}
+
+.min-temp{
+    color:#6B7280;
+}
+.forecast-date{
+    font-size:0.9rem;
+    color:#64748B;
+    margin-top:6px;
+    margin-bottom:15px;
+}
