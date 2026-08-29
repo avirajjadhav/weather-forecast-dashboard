@@ -10,16 +10,13 @@
   <body>
     <header class="header">
       <div class="brand">
-        <img src="assets/icons/cloud normal.svg" alt="weather Logo" class="brand-logo"/>
+        <img
+          src="assets/icons/cloud normal.svg"
+          alt="weather Logo"
+          class="brand-logo"
+        />
         <h1 class="app-title">Weather App</h1>
       </div>
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Forecast</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </nav>
       <div class="theme-toggle">
         <button class="theme-btn">
           <img
@@ -39,123 +36,126 @@
       </div>
     </header>
     <main>
-        <section class="weather-hero">
-        <div class="hero-top">
-        <button class="location-btn">
-            <img src="assets/icons/location_on_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="my-Location">
-            <span>Use My Location</span>
-        </button>
-    </div>
-    
-
-    <!-- here content -->
-     <div class="hero-content">
-       
-        <!-- left side -->
-        <div class="weather-info">
-         <div class="location">
-            <img src="assets/icons/location_on_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="location">
-            <h2 class="city-name">Mumbai, India</h2> 
-        </div>
-        <p class="current-date">
-            Tuesday, 21 May 2024 • 10:30 AM
-        </p>
-        <div class="weather-main">
-            <div class="weather-icon">
-                <img src="assets/icons/partly-cloudy-day.svg" alt="Partly Cloudy">
-                
+      <section class="weather-hero">
+        <!-- here content -->
+        <div class="hero-content">
+          <!-- left side -->
+          <div class="weather-info">
+            <div class="location">
+              <img
+                src="assets/icons/location_on_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="location"
+              />
+              <h2 class="city-name">Mumbai, India</h2>
             </div>
-            <div class="temperature">
-                <h2>29°C</h2>
+            <p class="current-date"></p>
+            <span class="time"></span>
+            <div class="weather-main">
+              <div class="weather">
+                <img
+                  src="assets/icons/partly-cloudy-day.svg"
+                  alt="Partly Cloudy" class="weather-icon"
+                />
+              </div>
+              <div class="temperature">
+                <h2 class="temp">29°C</h2>
                 <p class="condition">Partly Cloudy</p>
-                <p class="feels-like">Feels Like 31°C</p>
+                <p class="feels-like">Feels Like:<span> </span></p>
+              </div>
             </div>
+          </div>
+
+          <!-- right side -->
+          <div class="weather-details-card">
+            <div class="detail-card">
+              <img
+                src="assets/icons/water_drop_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="Humidity"
+              />
+              <span>Humidity</span>
+              <strong class="humidity">78%</strong>
+            </div>
+
+            <div class="detail-card">
+              <img
+                src="assets/icons/speed_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="Wind"
+              />
+              <span>Wind Speed</span>
+              <strong class="wspeed">15 km/h</strong>
+            </div>
+
+            <div class="detail-card">
+              <img
+                src="assets/icons/visibility_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="Visibility"
+              />
+              <span>Visibility</span>
+              <strong class="visibility">8 km</strong>
+            </div>
+
+            <div class="detail-card">
+              <img
+                src="assets/icons/speed_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="Pressure"
+              />
+              <span>Pressure</span>
+              <strong class="Pressure">1012 hPa</strong>
+            </div>
+          </div>
         </div>
-        </div>
-        
-        <!-- right side -->
-           <div class="weather-details-card">
+      </section>
+      <section class="forecast-section">
+        <h2>5-Day Forecast</h2>
+
+        <div class="forecast-container">
+          <div class="forecast-card">
+            <h3 class="day">wed</h3>
+            <p class="forecast-date">22 May</p>
+            <img class="forecast-icon"src="assets/icons/partly-cloudy-day.svg" alt="" />
+            <p class="max-temp">30°C</p>
+            <p class="min-temp">22°C</p>
+          </div>
            
-            <div class="detail-card">
-                <img src="assets/icons/water_drop_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Humidity">
-                <span>Humidity</span>
-                <strong>78%</strong>
-            </div>
+          
+          <div class="forecast-card">
+            <h3 class="day">wed</h3>
+            <p class="forecast-date">22 May</p>
+            <img class="forecast-icon"src="assets/icons/partly-cloudy-day.svg" alt="" />
+            <p class="max-temp">30°C</p>
+            <p class="min-temp">22°C</p>
+          </div>
 
-            <div class="detail-card">
-                <img src="assets/icons/speed_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Wind">
-                <span>Wind Speed</span>
-                <strong>15 km/h</strong>
-            </div>
+         
+          <div class="forecast-card">
+            <h3 class="day">wed</h3>
+            <p class="forecast-date">22 May</p>
+            <img class="forecast-icon"src="assets/icons/partly-cloudy-day.svg" alt="" />
+            <p class="max-temp">30°C</p>
+            <p class="min-temp">22°C</p>
+          </div>
 
-            <div class="detail-card">
-                <img src="assets/icons/visibility_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Visibility">
-                <span>Visibility</span>
-                <strong>8 km</strong>
-            </div>
+          
+          <div class="forecast-card">
+            <h3 class="day">wed</h3>
+            <p class="forecast-date">22 May</p>
+            <img class="forecast-icon"src="assets/icons/partly-cloudy-day.svg" alt="" />
+            <p class="max-temp">30°C</p>
+            <p class="min-temp">22°C</p>
+          </div>
 
-            <div class="detail-card">
-                <img src="assets/icons/speed_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Pressure">
-                <span>Pressure</span>
-                <strong>1012 hPa</strong>
-            </div>
-         </div>
-     </div>
-        </section>
-         <section class="forecast-section">
-
-            <h2>5-Day Forecast</h2>
-
-            <div class="forecast-container">
-
-                <div class="forecast-card">
-                    <h3>wed</h3>
-                    <p class="forecast-date">22 May</p>
-                    <img src="assets/icons/partly-cloudy-day.svg" alt="">
-                    <p class="max-temp">30°C</p>
-                    <p class="min-temp">22°C</p>
-                </div>
-              
-                <div class="forecast-card">
-                    <h3>thu</h3>
-                     <p class="forecast-date">23 May</p>
-                    <img src="assets/icons/partly-cloudy-day.svg" alt="">
-                    <p class="max-temp">30°C</p>
-                    <p class="min-temp">22°C</p>
-                </div>
-
-
-                <div class="forecast-card">
-                    <h3>Fri</h3>
-                     <p class="forecast-date">24 May</p>
-                    <img src="assets/icons/partly-cloudy-day.svg" alt="">
-                    <p class="max-temp">30°C</p>
-                    <p class="min-temp">22°C</p>
-                </div>
-
-
-                <div class="forecast-card">
-                    <h3>Sat</h3>
-                     <p class="forecast-date">25 May</p>
-                    <img src="assets/icons/partly-cloudy-day.svg" alt="">
-                    <p class="max-temp">30°C</p>
-                    <p class="min-temp">22°C</p>
-                </div>
-
-
-                <div class="forecast-card">
-                    <h3>sun</h3>
-                     <p class="forecast-date">26May</p>
-                    <img src="assets/icons/partly-cloudy-day.svg" alt="">
-                    <p class="max-temp">30°C</p>
-                    <p class="min-temp">22°C</p>
-                </div>
-                <!-- Repeat 4 more forecast cards -->
-
-            </div>
-
-        </section>
-
+          
+          <div class="forecast-card">
+            <h3 class="day">wed</h3>
+            <p class="forecast-date">22 May</p>
+            <img class="forecast-icon"src="assets/icons/partly-cloudy-day.svg" alt="" />
+            <p class="max-temp">30°C</p>
+            <p class="min-temp">22°C</p>
+          </div>
+          
+        </div>
+      </section>
     </main>
   </body>
+  <script src="js/app.js"></script>
 </html>
