@@ -180,12 +180,8 @@ async function WeatherData(city) {
 
     // Rain
     else if (condition === "Rain") {
-      if (icon.endsWith("d")) {
-        weatherIcon.src = "assets/icons/rainy-day.png";
-      } else {
-        weatherIcon.src = "assets/icons/rainy-night.png";
-      }
-    }
+    weatherIcon.src = "assets/icons/rainy-day.png";
+}
 
     // Thunderstorm
     else if (condition === "Thunderstorm") {
@@ -283,12 +279,20 @@ function updateForecast(forecastData) {
     const maxTemp = Math.round(Math.max(...temperatures));
 
     // -----------------------------
+    // DAYTIME FORECAST
+    // -----------------------------
+
+    // Try to find the 12 PM forecast
+    // If 12 PM is not available, use the middle forecast
+    const daytimeItem =
+      dailyItems.find((item) => item.dt_txt.includes("12:00:00")) ||
+      dailyItems[Math.floor(dailyItems.length / 2)];
+
+    // -----------------------------
     // DATE
     // -----------------------------
 
-    const firstItem = dailyItems[0];
-
-    const date = new Date(firstItem.dt * 1000);
+    const date = new Date(daytimeItem.dt * 1000);
 
     const dayName = date.toLocaleDateString("en-IN", {
       weekday: "short",
@@ -306,6 +310,43 @@ function updateForecast(forecastData) {
     const card = forecastCards[index];
 
     // -----------------------------
+    // WEATHER ICON
+    // -----------------------------
+
+    const condition = daytimeItem.weather[0].main;
+
+    const iconCode = daytimeItem.weather[0].icon;
+
+    const weatherIcon = card.querySelector(".forecast-icon");
+
+    if (condition === "Clear") {
+      if (iconCode.endsWith("d")) {
+        weatherIcon.src = "assets/icons/sunny.png";
+      } else {
+        weatherIcon.src = "assets/icons/cleannight.png";
+      }
+    }
+    else if (condition === "Clouds") {
+      if (iconCode.endsWith("d")) {
+        weatherIcon.src = "assets/icons/partly-cloudy.png";
+      } else {
+        weatherIcon.src = "assets/icons/partly-cloudy-night.png";
+      }
+    }
+    else if (condition === "Rain") {
+      weatherIcon.src = "assets/icons/rainy-day.png";
+    }
+    else if (condition === "Thunderstorm") {
+      weatherIcon.src = "assets/icons/thunderstorm.png";
+    }
+    else if (condition === "Snow") {
+      weatherIcon.src = "assets/icons/snow.png";
+    }
+    else {
+      weatherIcon.src = "assets/icons/fog.png";
+    }
+
+    // -----------------------------
     // UPDATE CARD
     // -----------------------------
 
@@ -313,8 +354,10 @@ function updateForecast(forecastData) {
 
     card.querySelector(".forecast-date").textContent = dateText;
 
-    card.querySelector(".max-temp").textContent = `${maxTemp}°C`;
+    card.querySelector(".max-temp").textContent =
+      `High ${maxTemp}°C`;
 
-    card.querySelector(".min-temp").textContent = `${minTemp}°C`;
+    card.querySelector(".min-temp").textContent =
+      `Low ${minTemp}°C`;
   });
 }
