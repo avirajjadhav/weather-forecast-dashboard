@@ -162,7 +162,7 @@ body{
     box-shadow: 0 0 0 3px rgba(59, 159, 232, 0.12);
 }
 
-.search-btn {
+/* .search-btn {
     width: 42px;
     height: 50px;
     position: fixed;
@@ -179,6 +179,21 @@ body{
     cursor: pointer;
 
     transition: 0.2s ease;
+} */
+.search-btn {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    position: fixed;
+    right: 6.5rem; 
+    background: #7d939f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
 }
 
 .search-btn:hover {
@@ -292,14 +307,17 @@ body{
 }
 
 .condition{
-    font-size:1.5rem;
+    /* font-size:1.5rem;
     font-weight:600;
-    margin-top:8px;
+    margin-top:8px; */
+     font-size: 1.2rem;
+    font-weight: 600;
+    color: #334155;
 }
 
-.feels-like{
-    margin-top:6px;
-    color:#6B7280;
+.feels-like {
+    color: #64748B;
+    font-size: 0.95rem;
 }
 
 /* ===========================
@@ -352,18 +370,18 @@ body{
 .forecast-section{
     padding:20px 70px 60px;
     border: 2px solid red;
-     transform: translateY(-20px);
+    margin-top: -20px;
     
 }
 
 .forecast-section h2{
     font-size:2rem;
-    margin-bottom:30px;
+    margin-bottom:0.5rem;
 }
 
 .forecast-container{
     position: relative;
-    top: -10px;
+    /* top: -10px; */
     border: 2px solid red;
     display:flex;
     gap:20px;
@@ -416,4 +434,268 @@ body{
     color:#64748B;
     margin-top:6px;
     margin-bottom:15px;
+}
+/* media query */
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media screen and (max-width: 600px) {
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+        padding: 12px 16px 18px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 12px;
+    }
+
+    .brand {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 6px;
+    }
+
+    .brand-logo {
+        position: static;
+
+        width: 32px;
+        height: 32px;
+    }
+
+    .app-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .search-box {
+        position: static;
+
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        margin: 0;
+    }
+
+    .search-box input {
+        position: static;
+
+        width: 200px;
+        height: 44px;
+
+        padding: 0 14px;
+
+        font-size: 0.9rem;
+
+        box-sizing: border-box;
+    }
+
+    .search-btn {
+        position: static;
+
+        width: 40px;
+        height: 40px;
+
+        flex-shrink: 0;
+
+        border-radius: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* =========================
+       HERO SECTION
+    ========================= */
+
+    .weather-hero {
+        padding: 25px 20px 35px;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 25px;
+
+        padding: 0;
+    }
+
+
+    /* =========================
+       WEATHER INFORMATION
+    ========================= */
+
+    .weather-info {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .location {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 8px;
+    }
+
+    .location img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .city-name {
+        font-size: 1.7rem;
+
+        white-space: nowrap;
+    }
+
+    .current-date {
+        margin-top: 8px;
+
+        font-size: 0.9rem;
+    }
+
+    .time {
+        display: block;
+
+        margin-top: 4px;
+
+        color: #6B7280;
+        font-size: 0.9rem;
+    }
+
+
+    /* =========================
+       MAIN WEATHER
+    ========================= */
+
+    .weather-main {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 20px;
+
+        margin-top: 25px;
+    }
+
+    .weather-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .temperature {
+        text-align: left;
+    }
+
+    .temperature h2 {
+        font-size: 2.5rem;
+    }
+
+    .condition {
+        font-size: 1rem;
+    }
+
+    .feels-like {
+        font-size: 0.85rem;
+    }
+
+
+    /* =========================
+       WEATHER DETAILS
+    ========================= */
+
+    .weather-details-card {
+        width: 100%;
+        
+        margin-top: 0;
+
+        padding: 20px;
+
+        border-radius: 20px;
+    }
+
+    .detail-card {
+        padding: 15px 0;
+
+        gap: 12px;
+    }
+
+
+    /* =========================
+       FORECAST
+    ========================= */
+
+    .forecast-section {
+        padding: 20px;
+
+        margin-top: 0;
+
+        border: none;
+    }
+
+    .forecast-section h2 {
+        font-size: 1.5rem;
+
+        margin-bottom: 15px;
+    }
+
+    .forecast-container {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 0;
+
+        border: none;
+    }
+
+    .forecast-card {
+        width: 100%;
+
+        min-width: 0;
+
+        height: auto;
+
+        min-height: 220px;
+    }
 }
