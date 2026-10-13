@@ -163,9 +163,9 @@ async function WeatherData(city) {
     // Clear
     if (condition === "Clear") {
       if (icon.endsWith("d")) {
-        weatherIcon.src = "assets/icons/clear-day.png";
+        weatherIcon.src = "assets/icons/clear-sky.png";
       } else {
-        weatherIcon.src = "assets/icons/clear-night.png";
+        weatherIcon.src = "assets/icons/night-moon.png";
       }
     }
 
